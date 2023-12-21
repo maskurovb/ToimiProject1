@@ -19,7 +19,7 @@ jobs:
       run: chmod +x gradlew
 
     - name: Run tests
-      run: ./gradlew custom -x test -DcustomTags=UI -Dhost=http://213.139.208.111:4444/wd/hub || true
+      run: ./gradlew custom -x test -DcustomTags=UI -Dhost=http://213.139.208.111:4444/wd/hub
 
     - name: Allure report
       if: always()
@@ -30,4 +30,3 @@ jobs:
       with:
         name: allure-report
         path: build/reports/allure-report
-
