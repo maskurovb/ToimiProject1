@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.constants.Constant.Urls.TASKEE;
 
-@BrowserType(browser = BrowserType.Browser.CHROME, isRemote = false)
+@BrowserType(browser = BrowserType.Browser.CHROME, isRemote = true)
 @Tag("UI")
 public class LoginTest extends BaseTest {
 
