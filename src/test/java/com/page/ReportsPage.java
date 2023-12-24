@@ -1,54 +1,54 @@
-//package com.page;
-//
-//import org.openqa.selenium.By;
-//import org.openqa.selenium.WebDriver;
-//
-//public class ReportsPage  {
-//
-//    private final By buttonReports = By.xpath("//*[@id='root']/div[1]/ul/li[4]/a");
-//    private final By buttonGeneral = By.xpath("//*[@id='root']/div[2]/div[5]/div[4]/section/div/div/div[1]/div[1]/div[1]/span");
-//    private final By buttonAllProjects = By.xpath("//*[@id='root']/div[2]/div[5]/div[4]/section/div/div/div[1]/div[2]/div[1]/div[1]/span");
-//    private final By buttonUserOne = By.xpath("//*[@id='root']/div[2]/div[5]/div[4]/section/div/div/div[1]/div[2]/div[1]/div[2]/div[3]/div[2]/div[2]/div/span");
-//    private final By buttonChooseDate = By.xpath("//*[@id='root']/div[2]/div[1]/div/div[2]/div[2]/div/div[1]/div/input");
-//    private final By buttonChooseDay = By.xpath("//*[@id='root']/div[2]/div[5]/div[4]/section/div/div/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/div/div[2]/div[2]/div[6]/div[1]");
-//    private final By buttonChooseFinishDay = By.xpath("//*[@id='root']/div[2]/div[5]/div[4]/section/div/div/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/div/div[2]/div[2]/div[3]/div[5]");
-//    private final By buttonChooseEmployee = By.xpath("//*[@id='root']/div[2]/div[5]/div[4]/section/div/div/div[1]/div[2]/div[3]/div[1]");
-//    private final By buttonChooseOneEmployee = By.xpath("//*[@id='root']/div[2]/div[5]/div[4]/section/div/div/div[1]/div[2]/div[3]/div[2]/div[3]/div[2]/div[2]/div");
-//
-//    public ReportsPage enterButtonReports() {
-//        driver.findElement(buttonReports).click();
-//        return this;
-//    }
-//    public ReportsPage enterButtonGeneral() {
-//        driver.findElement(buttonGeneral).click();
-//        return this;
-//    }
-//    public ReportsPage enterButtonAllProjects() {
-//        driver.findElement(buttonAllProjects).click();
-//        return this;
-//    }
-//    public ReportsPage enterButtonUserOne() {
-//        driver.findElement(buttonUserOne).click();
-//        return this;
-//    }
-//    public ReportsPage enterButtonChooseDate() {
-//        driver.findElement(buttonChooseDate).click();
-//        return this;
-//    }
-//    public ReportsPage inputButtonChooseDay() {
-//        driver.findElement(buttonChooseDay).click();
-//        return this;
-//    }
-//    public ReportsPage inputButtonChooseFinishDay() {
-//        driver.findElement(buttonChooseFinishDay).click();
-//        return this;
-//    }
-//    public ReportsPage enterButtonChooseEmployee() {
-//        driver.findElement(buttonChooseEmployee).click();
-//        return this;
-//    }
-//    public ReportsPage enterOneEmployee() {
-//        driver.findElement(buttonChooseOneEmployee).click();
-//        return this;
-//    }
-//}
+package com.page;
+import com.codeborne.selenide.SelenideElement;
+import static com.codeborne.selenide.Selenide.$x;
+
+
+public class ReportsPage  {
+
+    private static final SelenideElement buttonReports = $x("//*[@id='root']/div[1]/ul/li[4]/a");
+    private static final SelenideElement buttonGeneral = $x("//*[@id='root']/div[2]/div[5]/div[4]/section/div/div/div[1]/div[1]/div[1]/span");
+    private static final SelenideElement buttonAllProjects = $x("//*[@id='root']/div[2]/div[5]/div[4]/section/div/div/div[1]/div[2]/div[1]/div[1]/span");
+    private static final SelenideElement buttonUserOne = $x("//*[@id='root']/div[2]/div[5]/div[4]/section/div/div/div[1]/div[2]/div[1]/div[2]/div[3]/div[2]/div[2]/div/span");
+    private static final SelenideElement buttonChooseDate = $x("//*[@id='root']/div[2]/div[1]/div/div[2]/div[2]/div/div[1]/div/input");
+    private static final SelenideElement buttonChooseDay = $x("//*[@id='root']/div[2]/div[5]/div[4]/section/div/div/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/div/div[2]/div[2]/div[6]/div[1]");
+    private static final SelenideElement buttonChooseFinishDay = $x("//*[@id='root']/div[2]/div[5]/div[4]/section/div/div/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/div/div[2]/div[2]/div[3]/div[5]");
+    private static final SelenideElement buttonChooseEmployee = $x("//*[@id='root']/div[2]/div[5]/div[4]/section/div/div/div[1]/div[2]/div[3]/div[1]");
+    private static final SelenideElement buttonChooseOneEmployee = $x("//*[@id='root']/div[2]/div[5]/div[4]/section/div/div/div[1]/div[2]/div[3]/div[2]/div[3]/div[2]/div[2]/div");
+
+    public ReportsPage enterButtonReports() {
+        buttonReports.click();
+        return this;
+    }
+    public ReportsPage enterButtonGeneral() {
+        buttonGeneral.click();
+        return this;
+    }
+    public ReportsPage enterButtonAllProjects() {
+        buttonAllProjects.click();
+        return this;
+    }
+    public ReportsPage enterButtonUserOne() {
+        buttonUserOne.click();
+        return this;
+    }
+    public ReportsPage enterButtonChooseDate() {
+        buttonChooseDate.click();
+        return this;
+    }
+    public ReportsPage inputButtonChooseDay() {
+        buttonChooseDay.click();
+        return this;
+    }
+    public ReportsPage inputButtonChooseFinishDay() {
+        buttonChooseFinishDay.click();
+        return this;
+    }
+    public ReportsPage enterButtonChooseEmployee() {
+        buttonChooseEmployee.click();
+        return this;
+    }
+    public ReportsPage enterOneEmployee() {
+        buttonChooseOneEmployee.click();
+        return this;
+    }
+}
