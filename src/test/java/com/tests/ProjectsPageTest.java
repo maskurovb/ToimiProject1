@@ -23,7 +23,8 @@ public class ProjectsPageTest extends BaseTest {
                 .selectPassword("3125")
                 .enterSignIn();
 
-        ProjectsPage.enterButtonProject();
+        ProjectsPage.enterButtonProject()
+                .buttonCreateProject();
     }
 }
 

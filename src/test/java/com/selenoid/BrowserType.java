@@ -18,3 +18,4 @@ public @interface BrowserType {
         CHROME, FIREFOX
     }
 }
+//

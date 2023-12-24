@@ -90,3 +90,4 @@ public class BrowserTypeAnnotationProcessing implements BeforeAllCallback, Befor
         }
     }
 }
+//

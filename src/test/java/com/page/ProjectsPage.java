@@ -75,7 +75,7 @@ public class ProjectsPage {
     }
 }
 
-
+//
 
 //    public String getTitleButtonProject(){return buttonProject.getText();}
 //    public String getTitleButtonCreateProject(){return (buttonCreateProject).getText();}

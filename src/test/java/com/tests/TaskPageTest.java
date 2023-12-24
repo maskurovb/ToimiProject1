@@ -46,13 +46,3 @@ public class TaskPageTest extends BaseTest {
     }
 }
 
-
-//        Assertions.assertEquals("Описание", TasksPage.getTitleTaskPage());
-//        Assertions.assertEquals("Выбрать проект", TasksPage.getTitleChooseProject());
-//        Assertions.assertEquals("Выбрать статус", TasksPage.getButtonStatusSelect());
-//        Assertions.assertEquals("Выбрать исполнителя", TasksPage.getButtonChooseUser());
-//        Assertions.assertEquals("добавить тег", TasksPage.getSelectTag());
-//        Assertions.assertEquals("Выбрать время начала", TasksPage.getButtonDay());
-//        Assertions.assertEquals("Указать срок", TasksPage.getButtonTime());
-//        Assertions.assertEquals("Установить часы", TasksPage.getButtonTime());
-
