@@ -32,52 +32,42 @@ public class TasksPage {
         buttonTask.click();
         return this;
     }
-
     public TasksPage enterButtonAdd() {
         buttonAdd.click();
         return this;
     }
-
     public TasksPage enterButtonCreate() {
         buttonCreate.click();
         return this;
     }
-
     public TasksPage selectInputTaskName(String taskName) {
         inputTaskName.sendKeys(taskName);
         return this;
     }
-
     public TasksPage enterButtonChooseProject() {
         buttonChooseProject.click();
         return this;
     }
-
     public TasksPage enterButtonTest1() {
         buttonTest1.click();
         return this;
     }
-
     public TasksPage enterButtonUser() {
         buttonUser.click();
         return this;
     }
-
     public TasksPage enterButtonChooseUser() {
         buttonChooseUser.click();
         return this;
     }
-
     public TasksPage enterButtonStatusSelect() {
         buttonStatusSelect.click();
         return this;
     }
-
     public TasksPage enterButtonStatusChoose() {
         buttonStatusChoose.click();
         return this;
     }
-
     public TasksPage enterButtonSelectTag() {
         selectTag.click();
         return this;
@@ -95,32 +85,26 @@ public class TasksPage {
         buttonDate.click();
         return this;
     }
-
     public TasksPage enterButtonDay() {
         buttonDay.click();
         return this;
     }
-
     public TasksPage enterButtonTime() {
         buttonTime.click();
         return this;
     }
-
     public TasksPage selectInputOur(String taskOur) {
         inputOur.sendKeys(taskOur);
         return this;
     }
-
     public TasksPage enterButtonDescription() {
         description.click();
         return this;
     }
-
     public TasksPage enterButtonDescriptionCl() {
         descriptionCl.click();
         return this;
     }
-
     public TasksPage selectInputDescriptionTask(String DescriptionTask) {
         descriptionTask.sendKeys(DescriptionTask);
         return this;

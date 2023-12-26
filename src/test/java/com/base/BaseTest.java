@@ -22,6 +22,8 @@ public class BaseTest {
         open(TASKEE);
         getWebDriver().manage().window().maximize();
     }
+
+
 }
 //
 

@@ -6,6 +6,6 @@ public class Constant {
         public static final int EMPLICIT_WAIT = 15;
     }
     public static class Urls{
-        public static final String TASKEE = "https://test22.taskee.tech/login";
+        public static final String TASKEE = "https://test22.taskee.tech/login?lang=en";
     }
 }
