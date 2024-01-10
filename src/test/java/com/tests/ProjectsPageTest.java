@@ -5,6 +5,7 @@ import com.codeborne.selenide.Selenide;
 import com.page.LoginPage;
 import com.page.ProjectsPage;
 import com.selenoid.BrowserType;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -19,12 +20,13 @@ public class ProjectsPageTest extends BaseTest {
     private final ProjectsPage ProjectsPage = new ProjectsPage();
 
     @BeforeEach
-    public void login() throws InterruptedException{
+    public void login() throws InterruptedException {
         Selenide.open(TASKEE);
         LoginPage.selectUsername("test22@toimi.pro")
                 .selectPassword("3125")
                 .enterSignIn();
     }
+
     @Test
     public void createProject() throws InterruptedException {
         ProjectsPage.enterButtonProject()
@@ -39,10 +41,15 @@ public class ProjectsPageTest extends BaseTest {
                 .enterChooseStartDay()
                 .enterFinishDate()
                 .enterChooseFinishDay()
-                .enterInputProjectTime("123")
-                .enterCreateFinish();
+                .enterInputProjectTime("123");
+//                .enterCreateFinish();
+
+        Assertions.assertEquals("Confirmation letter", ProjectsPage.getChooseProjectSubGroup());
+        Assertions.assertEquals("проекты", ProjectsPage.getTitleButtonProject());
+
 
     }
+
 
     @Test
     public void createProjectNameError() throws InterruptedException {
@@ -57,12 +64,16 @@ public class ProjectsPageTest extends BaseTest {
                 .enterChooseStartDay()
                 .enterFinishDate()
                 .enterChooseFinishDay()
-                .enterInputProjectTime("123")
-                .enterCreateFinish();
+                .enterInputProjectTime("123");
+//                .enterCreateFinish();
     }
+
+
+
+
+
 }
 
-//
 
 
 
@@ -71,9 +82,7 @@ public class ProjectsPageTest extends BaseTest {
 
 
 
-//        Assertions.assertEquals("Projects", ProjectsPage.getTitleButtonProject());
-//        Assertions.assertEquals("Создать проект",ProjectsPage.getTitleButtonCreateProject());
-//        Assertions.assertEquals("Выбрать статус",ProjectsPage.getTitleButtonChooseStatus());
-//        Assertions.assertEquals("Выбрать группу",ProjectsPage.getTitleButtonChooseGroup());
+
+
 
 

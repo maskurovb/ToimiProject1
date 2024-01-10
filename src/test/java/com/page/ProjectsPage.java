@@ -21,6 +21,8 @@ public class ProjectsPage {
 
 
 
+
+
     public ProjectsPage enterButtonProject() {
         buttonProject.click();
         return this;
@@ -73,10 +75,14 @@ public class ProjectsPage {
         inputProjectTime.sendKeys(projectTime);
         return this;
     }
-    public ProjectsPage enterCreateFinish(){
-        createFinish.click();
-        return this;
-    }
+//    public ProjectsPage enterCreateFinish(){
+//        createFinish.click();
+//        return this;
+//    }
+
+    public String getChooseProjectSubGroup(){return chooseProjectSubGroup.getText();}
+    public String getTitleButtonProject(){return buttonProject.getText();}
+
 }
 
 
@@ -85,12 +91,8 @@ public class ProjectsPage {
 
 
 
-//
 
-//    public String getTitleButtonProject(){return buttonProject.getText();}
-//    public String getTitleButtonCreateProject(){return (buttonCreateProject).getText();}
-//    public  String getTitleButtonChooseStatus(){return (buttonChooseStatus).getText();}
-//    public String getTitleButtonChooseGroup(){return buttonChooseGroup.getText();}
+
 
 
 
