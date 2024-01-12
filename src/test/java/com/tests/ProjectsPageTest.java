@@ -41,12 +41,13 @@ public class ProjectsPageTest extends BaseTest {
                 .enterChooseStartDay()
                 .enterFinishDate()
                 .enterChooseFinishDay()
-                .enterInputProjectTime("123");
-//                .enterCreateFinish();
+                .enterInputProjectTime("123")
+                .enterCreateFinish();
+
+
 
         Assertions.assertEquals("Confirmation letter", ProjectsPage.getChooseProjectSubGroup());
         Assertions.assertEquals("проекты", ProjectsPage.getTitleButtonProject());
-
 
     }
 
@@ -64,8 +65,8 @@ public class ProjectsPageTest extends BaseTest {
                 .enterChooseStartDay()
                 .enterFinishDate()
                 .enterChooseFinishDay()
-                .enterInputProjectTime("123");
-//                .enterCreateFinish();
+                .enterInputProjectTime("123")
+                .enterCreateFinish();
     }
 
 

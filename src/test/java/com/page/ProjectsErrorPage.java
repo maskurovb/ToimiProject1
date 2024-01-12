@@ -20,11 +20,14 @@ public class ProjectsErrorPage {
 
     private static final SelenideElement inputProjectTime2 = $x("//*[@id='root']/div[2]/div[4]/div[4]/section/div/div/div[5]/div/input");
 
-    private static final SelenideElement buttonProjectsTagsGroup = $x("//div[@class='tags-edit-list']");
-    private static final SelenideElement projectsTagsGroupName = $x("//div[@class='tags-edit-list__add-box-inner']");
+    private static final SelenideElement buttonProjectsTagsGroup = $x("//*[@id='create-project-group-tags']/div[2]/div/div[2]/button");
+    private static final SelenideElement projectsTagsGroupName = $x("//input[@placeholder='Название группы']");
     private static final SelenideElement addTagsFinal = $x("//*[@id='create-project-group-tags']/div[2]/div/div[2]/div/div[3]/button[2]");
 
     private static final SelenideElement addStatus = $x("//div[@class='statuses-edit-list__add-button']");
+    private static final SelenideElement statusGroupName = $x("(//input[@type='text'])[6]");
+
+
     public ProjectsErrorPage enterButtonProject2() {
         buttonProject2.click();
         return this;
@@ -73,7 +76,7 @@ public class ProjectsErrorPage {
         inputProjectTime2.sendKeys(projectTime2);
         return this;
     }
-    public ProjectsErrorPage enterButtonProjectsTagsGroup(){
+    public ProjectsErrorPage enterButtonProjectsTagsGroup() {
         buttonProjectsTagsGroup.click();
         return this;
     }
@@ -89,5 +92,8 @@ public class ProjectsErrorPage {
         addStatus.click();
         return this;
     }
-
+    public ProjectsErrorPage enterStatusGroupName(String StatusName) {
+        statusGroupName.sendKeys(StatusName);
+        return this;
+    }
 }

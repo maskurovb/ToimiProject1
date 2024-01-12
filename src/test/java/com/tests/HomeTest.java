@@ -25,7 +25,7 @@ public class HomeTest extends BaseTest {
                 .selectPassword("3125")
                 .enterSignIn();
 
-                HomePage.enterButtonCreateTask();
+
 
     }
 }

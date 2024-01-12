@@ -19,13 +19,13 @@ public class TasksPage {
     private static final SelenideElement selectTag = $x("//button[@class='tag-add-button active']");
     private static final SelenideElement chooseTag = $x("//*[@id='root']/div[2]/div[4]/div[4]/section/div/div/div[3]/div[3]/div/div[3]/div[2]/div/div[2]/div[1]/div/div/span");
     private static final SelenideElement titleTextHomepage = $x("(//a[@class='create-task__group-nav active'])[2]");
-    private static final SelenideElement buttonDate = $x("//*[@id='root']/div[2]/div[4]/div[4]/section/div/div/div[4]/div[2]/div/div[3]/div[1]/div/input");
-    private static final SelenideElement buttonDay = $x("//*[@id='root']/div[2]/div[4]/div[4]/section/div/div/div[4]/div[2]/div/div[3]/div[2]/div[2]/div/div/div[2]/div[2]/div[5]");
+    private static final SelenideElement buttonDate = $x("(//div[@class='select-date-calendar start-time-and-end-time__select-date-calendar'])[1]");
+    private static final SelenideElement buttonDay = $x("//*[@id='root']/div[2]/div[4]/div[4]/section/div/div/div[4]/div[2]/div/div[1]/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div[5]");
     private static final SelenideElement buttonTime = $x("//*[@id='root']/div[2]/div[4]/div[4]/section/div/div/div[5]/div/input");
     private static final SelenideElement inputOur = $x("//*[@id='root']/div[2]/div[4]/div[4]/section/div/div/div[5]/div/input");
     private static final SelenideElement description = $x("//*[@id='create-task-group-description']/div[1]/div/a[1]");
     private static final SelenideElement descriptionCl = $x("//*[@id='rdw-wrapper-2466']/div[2]/div/div/div");
-    private static final SelenideElement descriptionTask = $x("//*[@id='rdw-wrapper-9277']/div[2]/div/div/div/div/div/div/span");
+    private static final SelenideElement descriptionTask = $x("//span[@data-text='true']");
 
 
     public TasksPage enterButtonTask() {
@@ -80,8 +80,7 @@ public class TasksPage {
         chooseTag.click();
         return this;
     }
-
-    public TasksPage enterButtonDate() {
+    public TasksPage enterButtonDate()  {
         buttonDate.click();
         return this;
     }

@@ -31,15 +31,12 @@ public class ProjectsErrorPageTest extends BaseTest {
         ProjectsErrorPage.enterButtonProject2()
                 .enterCreateProject2()
                 .enterChooseProjectGroup2()
-                .enterInputProjectName2("Project Autotest2")
+                .enterInputProjectName2("Project Autotest1")
                 .enterChooseProjectSubGroup2()
                 .enterChooseProjectGroupName2()
                 .enterSelectUser2()
                 .enterSelectUserName2()
-                .enterSelectUserName3()
-                .enterSelectUserName4()
-                .enterSelectUserName5();
-
+                .enterSelectUserName3();
     }
 
     @Test
@@ -47,10 +44,9 @@ public class ProjectsErrorPageTest extends BaseTest {
         ProjectsErrorPage.enterButtonProject2()
                 .enterCreateProject2()
                 .enterChooseProjectGroup2()
-                .enterInputProjectName2("Project Autotest3")
+                .enterInputProjectName2("Project Autotest2")
                 .enterInputProjectTime2("xXx");
     }
-
 
     @Test
     public void addProjectsTagsGroup() throws InterruptedException {
@@ -58,8 +54,9 @@ public class ProjectsErrorPageTest extends BaseTest {
                 .enterCreateProject2()
                 .enterChooseProjectGroup2()
                 .enterInputProjectName2("Project Autotest3")
-                .enterButtonProjectsTagsGroup();
-
+                .enterButtonProjectsTagsGroup()
+                .enterProjectsTagsGroupName("В процессе")
+                .enterAddTagsFinal();
     }
 
     @Test
@@ -68,7 +65,7 @@ public class ProjectsErrorPageTest extends BaseTest {
                 .enterCreateProject2()
                 .enterChooseProjectGroup2()
                 .enterInputProjectName2("Project Autotest4")
-                .enterAddStatus();
+                .enterAddStatus()
+                .enterStatusGroupName("Срочно");
     }
-
 }

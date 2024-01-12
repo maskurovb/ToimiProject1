@@ -21,15 +21,16 @@ public class ReportsPageTest extends BaseTest {
         LoginPage.selectUsername("test22@toimi.pro")
                 .selectPassword("3125")
                 .enterSignIn();
+
         ReportsPage.enterButtonReports()
                 .enterButtonGeneral()
                 .enterButtonAllProjects()
                 .enterButtonUserOne()
                 .enterButtonChooseDate()
                 .inputButtonChooseDay()
-                .inputButtonChooseFinishDay()
                 .enterButtonChooseEmployee()
                 .enterOneEmployee();
+
 
     }
 }

@@ -5,10 +5,10 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class HomePage {
 
-    private static final SelenideElement buttonCreateTask = $x("//*[@id='root']/div[2]/div[2]/button/div");
+    private static final SelenideElement buttonCreateTask = $x("//div[@class='create-task-button__icon-circle-hover']");
 
     public HomePage enterButtonCreateTask() throws InterruptedException {
-        Thread.sleep(4000);
+        Thread.sleep(5000);
         buttonCreateTask.click();
         return this;
     }

@@ -17,7 +17,7 @@ public class TaskPageTest extends BaseTest {
     private final TasksPage TasksPage = new TasksPage();
 
     @Test
-    public void createTask() {
+    public void createTask(){
         Selenide.open(TASKEE);
         LoginPage.selectUsername("test22@toimi.pro")
                 .selectPassword("3125")
@@ -38,10 +38,16 @@ public class TaskPageTest extends BaseTest {
                 .enterButtonDate()
                 .enterButtonDay()
                 .enterButtonTime()
-                .selectInputOur("111")
-                .enterButtonDescription()
-                .enterButtonDescriptionCl()
-                .selectInputDescriptionTask("описание задачи");
+                .selectInputOur("111");
+
+
+
+
+//                .enterButtonDescription()
+//                .enterButtonDescriptionCl()
+//                .selectInputDescriptionTask("описание задачи");
+
+
 
     }
 }

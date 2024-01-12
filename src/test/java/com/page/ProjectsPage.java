@@ -13,9 +13,9 @@ public class ProjectsPage {
     private static final SelenideElement selectUser = $x("//div[@class='create-project__created-user']");
     private static final SelenideElement selectUserName = $x("(//div[@class='dropdown__item'])[1]");
     private static final SelenideElement startDate = $x("//div[@class='create-project__start-and-end-time']");
-    private static final SelenideElement chooseStartDay = $x("//div[@class='react-datepicker__day react-datepicker__day--030 react-datepicker__day--weekend']");
-    private static final SelenideElement finishDate = $x("(//div[@class='select-date-calendar start-time-and-end-time__select-date-calendar'])[2]");
-    private static final SelenideElement chooseFinishDay = $x("//div[@class='react-datepicker__day react-datepicker__day--031 react-datepicker__day--weekend']");
+    private static final SelenideElement chooseStartDay = $x("//div[@class='react-datepicker__day react-datepicker__day--001']");
+    private static final SelenideElement finishDate = $x("(//div[@class='react-datepicker-wrapper'])[2]");
+    private static final SelenideElement chooseFinishDay = $x("//div[@class='react-datepicker__day react-datepicker__day--025']");
     private static final SelenideElement inputProjectTime = $x("//*[@id='root']/div[2]/div[4]/div[4]/section/div/div/div[5]/div/input");
     private static final SelenideElement createFinish = $x("(//button[@class='button button--action'])[2]");
 
@@ -75,13 +75,20 @@ public class ProjectsPage {
         inputProjectTime.sendKeys(projectTime);
         return this;
     }
-//    public ProjectsPage enterCreateFinish(){
-//        createFinish.click();
-//        return this;
-//    }
+    public ProjectsPage enterCreateFinish(){
+        createFinish.click();
+        return this;
+    }
 
-    public String getChooseProjectSubGroup(){return chooseProjectSubGroup.getText();}
-    public String getTitleButtonProject(){return buttonProject.getText();}
+    public String getChooseProjectSubGroup() {return chooseProjectSubGroup.getText();}
+    public String getTitleButtonProject() {return buttonProject.getText();}
+
+
+
+
+
+
+
 
 }
 
