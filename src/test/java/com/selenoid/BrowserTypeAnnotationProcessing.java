@@ -1,6 +1,5 @@
 package com.selenoid;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideConfig;
 import com.codeborne.selenide.SelenideDriver;
 import com.codeborne.selenide.WebDriverRunner;
@@ -62,7 +61,7 @@ public class BrowserTypeAnnotationProcessing implements BeforeAllCallback, Befor
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
         options.addArguments("--remote-allow-origins=*");
-      //  options.addArguments("--headless"); no window mode
+        options.addArguments("--headless");
         SelenideConfig config = new SelenideConfig()
                 .driverManagerEnabled(true)
                 .browserVersion("120")
