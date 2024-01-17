@@ -12,13 +12,13 @@ import static com.constants.Constant.Urls.TASKEE;
 
 @BrowserType(browser = BrowserType.Browser.CHROME, isRemote = false)
 @Tag("UI")
-
 public class LoginTest extends BaseTest {
     private final LoginPage loginPage = new LoginPage();
 
     @BeforeEach
     public void login() {
-        Selenide.open(TASKEE);}
+        Selenide.open(TASKEE);
+    }
 
 
 
@@ -41,21 +41,20 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
+    @Tag("TEST")
     public void errorMail() {
         loginPage.selectUsername("test122oimi.pro")
                 .selectPassword("3125")
-                .enterSignIn();
-        Assertions.assertEquals("Введите действительный адрес электронной почты", loginPage.getButtonInputErrorMessage());
+                .enterSignIn()
+                .assertErrorMessageText("Введите действительный адрес электронной почты");
     }
 
     @Test
     public void forgotPassword() {
         loginPage.selectUsername("test22@toimi.pro")
                 .selectPassword("312")
-                .enterSignIn();
-        Assertions.assertEquals("Email или пароль неверны", loginPage.getButtonForgotPassword());
+                .enterSignIn()
+                .assertErrorMessageText("Email или пароль неверны");
     }
-
-
     }
 

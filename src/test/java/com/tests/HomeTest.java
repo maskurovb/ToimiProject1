@@ -18,7 +18,7 @@ public class HomeTest extends BaseTest {
 
 
     @Test
-    public void chekRedirect() throws InterruptedException {
+    public void chekRedirect() {
         Selenide.open(TASKEE);
 
         LoginPage.selectUsername("test22@toimi.pro")

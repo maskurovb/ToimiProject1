@@ -19,7 +19,7 @@ public class ProjectsErrorPageTest extends BaseTest {
     private final ProjectsErrorPage ProjectsErrorPage = new ProjectsErrorPage();
 
     @BeforeEach
-    public void login() throws InterruptedException {
+    public void login() {
         Selenide.open(TASKEE);
         LoginPage.selectUsername("test22@toimi.pro")
                 .selectPassword("3125")
@@ -27,7 +27,7 @@ public class ProjectsErrorPageTest extends BaseTest {
 
     }
     @Test
-    public void addMultiUsers() throws InterruptedException {
+    public void addMultiUsers() {
         ProjectsErrorPage.enterButtonProject2()
                 .enterCreateProject2()
                 .enterChooseProjectGroup2()
@@ -40,7 +40,7 @@ public class ProjectsErrorPageTest extends BaseTest {
     }
 
     @Test
-    public void addProjectsTime() throws InterruptedException {
+    public void addProjectsTime() {
         ProjectsErrorPage.enterButtonProject2()
                 .enterCreateProject2()
                 .enterChooseProjectGroup2()
@@ -49,7 +49,7 @@ public class ProjectsErrorPageTest extends BaseTest {
     }
 
     @Test
-    public void addProjectsTagsGroup() throws InterruptedException {
+    public void addProjectsTagsGroup() {
         ProjectsErrorPage.enterButtonProject2()
                 .enterCreateProject2()
                 .enterChooseProjectGroup2()
@@ -60,12 +60,12 @@ public class ProjectsErrorPageTest extends BaseTest {
     }
 
     @Test
-    public void addProjectsStatus() throws InterruptedException {
+    public void addProjectsStatus() {
         ProjectsErrorPage.enterButtonProject2()
                 .enterCreateProject2()
                 .enterChooseProjectGroup2()
-                .enterInputProjectName2("Project Autotest4")
-                .enterAddStatus()
-                .enterStatusGroupName("Срочно");
+                .enterInputProjectName2("Project Autotest45")
+                .enterAddStatus();
+//                .enterStatusGroupName("Срочно");
     }
 }

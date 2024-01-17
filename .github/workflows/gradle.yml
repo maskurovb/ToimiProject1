@@ -1,6 +1,8 @@
 name: Tests
 
 on:
+  schedule:
+    - cron: "0 0 * * *"
   push:
     branches: [ "master" ]
 
@@ -19,13 +21,14 @@ jobs:
       run: chmod +x gradlew
 
     - name: Run tests
-      run: ./gradlew custom -x test -DcustomTags=UI -Dhost=http://213.139.208.111:4444/wd/hub
+      run: ./gradlew custom -x test -DcustomTags=UI -Dhost=http://213.139.208.111:4444/wd/hub --stacktrace
 
     - name: Allure report
-      if: always()
+      if: success() || failure()
       run: ./gradlew allureReport
 
     - name: Save results
+      if: success() || failure()
       uses: actions/upload-artifact@v1
       with:
         name: allure-report

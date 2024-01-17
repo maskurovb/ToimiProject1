@@ -25,7 +25,7 @@ public class ProjectsErrorPage {
     private static final SelenideElement addTagsFinal = $x("//*[@id='create-project-group-tags']/div[2]/div/div[2]/div/div[3]/button[2]");
 
     private static final SelenideElement addStatus = $x("//div[@class='statuses-edit-list__add-button']");
-    private static final SelenideElement statusGroupName = $x("(//input[@type='text'])[6]");
+    private static final SelenideElement statusGroupName = $x("//*[@id='create-project-group-statuses']/div[2]/div[2]/form/div[1]/input");
 
 
     public ProjectsErrorPage enterButtonProject2() {

@@ -30,7 +30,5 @@ public class ReportsPageTest extends BaseTest {
                 .inputButtonChooseDay()
                 .enterButtonChooseEmployee()
                 .enterOneEmployee();
-
-
     }
 }

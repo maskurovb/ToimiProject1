@@ -7,8 +7,7 @@ public class HomePage {
 
     private static final SelenideElement buttonCreateTask = $x("//div[@class='create-task-button__icon-circle-hover']");
 
-    public HomePage enterButtonCreateTask() throws InterruptedException {
-        Thread.sleep(5000);
+    public HomePage enterButtonCreateTask() {
         buttonCreateTask.click();
         return this;
     }

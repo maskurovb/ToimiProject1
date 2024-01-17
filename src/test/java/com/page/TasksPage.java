@@ -27,6 +27,17 @@ public class TasksPage {
     private static final SelenideElement descriptionCl = $x("//*[@id='rdw-wrapper-2466']/div[2]/div/div/div");
     private static final SelenideElement descriptionTask = $x("//span[@data-text='true']");
 
+    // comment with project
+    private static final SelenideElement openTestForComment = $x("//a[@href='/projects/2/tasks/178']");
+    private static final SelenideElement addComment = $x("//div[@class='comments-block__editor']");
+    private static final SelenideElement writeComment = $x("//div[@class='public-DraftStyleDefault-block public-DraftStyleDefault-ltr']");
+    private static final SelenideElement addTextComment = $x("//div[@class='comments-block__send-block']");
+    private static final SelenideElement assertComment = $x("//*[@id='task-group-description']/div[1]/div/a[3]/span[1]");
+
+    // change status projects
+    private static final SelenideElement statusClass = $x("//div[@class='status']");
+    private static final SelenideElement changeStatsForAwaiting = $x("(//div[@class='dropdown__item-content'])[4]");
+
 
     public TasksPage enterButtonTask() {
         buttonTask.click();
@@ -108,5 +119,39 @@ public class TasksPage {
         descriptionTask.sendKeys(DescriptionTask);
         return this;
     }
+    public TasksPage buttonOpenTestForComment() {
+        openTestForComment.click();
+        return this;
+    }
+    public TasksPage buttonAddComment() {
+        addComment.click();
+        return this;
+    }
+    public TasksPage inputWriteComment (String commentWrite) {
+        writeComment.sendKeys(commentWrite);
+        return this;
+    }
+    public TasksPage buttonAddTextComment() {
+        addTextComment.click();
+        return this;
+    }
+    public TasksPage findAssertComment() {
+        assertComment.click();
+        return this;
+    }
+    public TasksPage buttonStatusClass() {
+        statusClass.click();
+        return this;
+    }
+    public TasksPage buttonChangeStatsForAwaiting() {
+        changeStatsForAwaiting.click();
+        return this;
+    }
+
+
+
+
+
+    public String getFindAssertComment() {return assertComment.getText();}
 }
 

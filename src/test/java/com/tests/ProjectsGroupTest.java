@@ -20,7 +20,7 @@ public class ProjectsGroupTest extends BaseTest {
 
 
     @BeforeEach
-    public void login() throws InterruptedException {
+    public void login() {
         Selenide.open(TASKEE);
         LoginPage.selectUsername("test22@toimi.pro")
                 .selectPassword("3125")
@@ -28,7 +28,7 @@ public class ProjectsGroupTest extends BaseTest {
     }
 
         @Test
-        public void createProjectsGroup () throws InterruptedException {
+        public void createProjectsGroup () {
         ProjectsGroupPage.enterButtonProject()
                     .enterCreateProject()
                     .enterChooseProjectGroup()
@@ -43,7 +43,7 @@ public class ProjectsGroupTest extends BaseTest {
         }
 
         @Test
-        public void createProjectsGroupNoName () throws InterruptedException {
+        public void createProjectsGroupNoName () {
         ProjectsGroupPage.enterButtonProject()
                     .enterCreateProject()
                     .enterChooseProjectGroup()
@@ -51,7 +51,7 @@ public class ProjectsGroupTest extends BaseTest {
         }
 
         @Test
-        public void openProject () throws InterruptedException {
+        public void openProject () {
             ProjectsGroupPage.enterButtonProject()
                     .enterOpenProjectName()
                     .enterShowNestingLevel()
@@ -61,5 +61,4 @@ public class ProjectsGroupTest extends BaseTest {
                     .enterSortPriority();
 
         }
-
     }
